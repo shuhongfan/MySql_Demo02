@@ -1,0 +1,14 @@
+create database itcast;
+
+use itcast;
+
+create table tb_user(
+	id int(11) not null,
+	name varchar(50) not null,
+	sex varchar(1),
+	primary key (id)
+)engine=innodb default charset=utf8;
+
+insert into tb_user(id,name,sex) values(1,'Tom','1');
+insert into tb_user(id,name,sex) values(2,'Trigger','0');
+insert into tb_user(id,name,sex) values(3,'Dawn','1');

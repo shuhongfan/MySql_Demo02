@@ -1,0 +1,16 @@
+
+create table tb_monthpart(
+    id   bigint  not null comment 'ID'  primary key,
+    name varchar(100) null comment 'ÐÕÃû',
+    create_time date  null
+);
+
+insert into tb_monthpart(id,name ,create_time) values(1,'Tom','2022-01-01');
+insert into tb_monthpart(id,name ,create_time) values(2,'Cat','2022-01-10');
+insert into tb_monthpart(id,name ,create_time) values(3,'Rose','2022-01-31');
+insert into tb_monthpart(id,name ,create_time) values(4,'Coco','2022-02-20');
+insert into tb_monthpart(id,name ,create_time) values(5,'Rose2','2022-02-25');
+insert into tb_monthpart(id,name ,create_time) values(6,'Coco2','2022-03-10');
+insert into tb_monthpart(id,name ,create_time) values(7,'Coco3','2022-03-31');
+insert into tb_monthpart(id,name ,create_time) values(8,'Coco4','2022-04-10');
+insert into tb_monthpart(id,name ,create_time) values(9,'Coco5','2022-04-30');

@@ -1,0 +1,19 @@
+
+CREATE TABLE tb_longhash (
+  id int(11) NOT NULL COMMENT 'ID',
+  name varchar(200) DEFAULT NULL COMMENT 'Ãû³Æ',
+  firstChar char(1)  COMMENT 'Ê××ÖÄ¸',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+insert into tb_longhash (id,name,firstChar) values(1,'ÆßÆ¥ÀÇ','Q');
+insert into tb_longhash (id,name,firstChar) values(2,'°ËÆ¥ÀÇ','B');
+insert into tb_longhash (id,name,firstChar) values(3,'¾ÅÆ¥ÀÇ','J');
+insert into tb_longhash (id,name,firstChar) values(4,'Ê®Æ¥ÀÇ','S');
+insert into tb_longhash (id,name,firstChar) values(5,'ÁùÆ¥ÀÇ','L');
+insert into tb_longhash (id,name,firstChar) values(6,'ÎåÆ¥ÀÇ','W');
+insert into tb_longhash (id,name,firstChar) values(7,'ËÄÆ¥ÀÇ','S');
+insert into tb_longhash (id,name,firstChar) values(8,'ÈýÆ¥ÀÇ','S');
+insert into tb_longhash (id,name,firstChar) values(9,'Á½Æ¥ÀÇ','L');

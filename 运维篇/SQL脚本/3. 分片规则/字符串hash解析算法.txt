@@ -1,0 +1,32 @@
+<tableRule name="sharding-by-stringhash">
+	<rule>
+		<columns>user_id</columns>
+		<algorithm>sharding-by-stringhash</algorithm>
+	</rule>
+</tableRule>
+
+<function name="sharding-by-stringhash" class="io.mycat.route.function.PartitionByString">
+	<property name="partitionLength">512</property> <!-- zero-based -->
+	<property name="partitionCount">2</property>
+	<property name="hashSlice">0:2</property>
+</function>
+
+
+
+
+
+
+
+
+
+create table tb_strhash(
+	name varchar(20) primary key,
+	content varchar(100)
+)engine=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+INSERT INTO tb_strhash (name,content) VALUES('T1001', UUID());
+INSERT INTO tb_strhash (name,content) VALUES('ROSE', UUID());
+INSERT INTO tb_strhash (name,content) VALUES('JERRY', UUID());
+INSERT INTO tb_strhash (name,content) VALUES('CRISTINA', UUID());
+INSERT INTO tb_strhash (name,content) VALUES('TOMCAT', UUID());

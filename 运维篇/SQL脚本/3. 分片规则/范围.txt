@@ -1,0 +1,12 @@
+CREATE TABLE tb_operate (
+  id bigint(20) NOT NULL COMMENT 'ID',
+  operateuser varchar(200) DEFAULT NULL COMMENT 'ÐÕÃû',
+  operation int(2) DEFAULT NULL COMMENT '1: insert, 2: delete, 3: update , 4: select',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+insert into tb_operate (id,operateuser ,operation) values(1,'Tom',1);
+insert into tb_operate (id,operateuser ,operation) values(2,'Cat',2);
+insert into tb_operate (id,operateuser ,operation) values(3,'Rose',3);
+insert into tb_operate (id,operateuser ,operation) values(4,'Coco',2);
+insert into tb_operate (id,operateuser ,operation) values(5,'Lily',1);

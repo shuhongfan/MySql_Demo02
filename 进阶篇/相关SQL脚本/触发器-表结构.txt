@@ -1,0 +1,17 @@
+create table user_logs(
+  id int(11) not null auto_increment,
+  operation varchar(20) not null comment '操作类型, insert/update/delete',
+  operate_time datetime not null comment '操作时间',
+  operate_id int(11) not null comment '操作的ID',
+  operate_params varchar(500) comment '操作参数',
+  primary key(`id`)
+)engine=innodb default charset=utf8;
+
+
+
+insert into tb_user(id, name, phone, email, profession, age, gender, status, createtime)
+VALUES (25,'二皇子','18809091212','erhuangzi@163.com','软件工程',23,'1','1',now());
+
+update tb_user set age = 32 where id = 23;
+
+delete from tb_user where id = 25;

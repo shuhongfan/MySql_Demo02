@@ -1,0 +1,34 @@
+<tableRule name="sharding-by-substring">
+	<rule>
+		<columns>id</columns>
+		<algorithm>sharding-by-substring</algorithm>
+	</rule>
+</tableRule>
+
+<function name="sharding-by-substring" class="io.mycat.route.function.PartitionDirectBySubString">
+	<property name="startIndex">0</property> <!-- zero-based -->
+	<property name="size">2</property>
+	<property name="partitionCount">3</property>
+	<property name="defaultPartition">0</property>
+</function>
+
+
+
+
+
+
+
+
+CREATE TABLE tb_app (
+  id varchar(10) NOT NULL COMMENT 'ID',
+  name varchar(200) DEFAULT NULL COMMENT 'Ãû³Æ',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+insert into tb_app (id,name) values('0000001','Testx00001');
+insert into tb_app (id,name) values('0100001','Test100001');
+insert into tb_app (id,name) values('0100002','Test200001');
+insert into tb_app (id,name) values('0200001','Test300001');
+insert into tb_app (id,name) values('0200002','TesT400001');
